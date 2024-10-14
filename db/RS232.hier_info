@@ -1,0 +1,190 @@
+|RS232_decoder
+RX => comparateur:comp0.A[0]
+RX => reg_dec:registre_deca.D[7]
+clk => registre:registre1.clk
+clk => reg_dec:registre_deca.clk
+clk => compteur_generic:counter_1.CLOCK
+clk => UC_RS232:UC_fsm.clk
+start => UC_RS232:UC_fsm.start
+reset => UC_RS232:UC_fsm.reset
+S[0] <= registre:registre1.Q[0]
+S[1] <= registre:registre1.Q[1]
+S[2] <= registre:registre1.Q[2]
+S[3] <= registre:registre1.Q[3]
+S[4] <= registre:registre1.Q[4]
+S[5] <= registre:registre1.Q[5]
+S[6] <= registre:registre1.Q[6]
+S[7] <= registre:registre1.Q[7]
+
+
+|RS232_decoder|comparateur:comp0
+A[0] => equal.IN0
+A[0] => LessThan0.IN1
+B[0] => equal.IN1
+B[0] => LessThan0.IN2
+inf <= inf.DB_MAX_OUTPUT_PORT_TYPE
+sup <= sup.DB_MAX_OUTPUT_PORT_TYPE
+eg <= equal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS232_decoder|comparateur:comp7
+A[0] => Equal0.IN2
+A[0] => LessThan0.IN3
+A[1] => Equal0.IN1
+A[1] => LessThan0.IN2
+A[2] => Equal0.IN0
+A[2] => LessThan0.IN1
+B[0] => Equal0.IN5
+B[0] => LessThan0.IN6
+B[1] => Equal0.IN4
+B[1] => LessThan0.IN5
+B[2] => Equal0.IN3
+B[2] => LessThan0.IN4
+inf <= inf.DB_MAX_OUTPUT_PORT_TYPE
+sup <= sup.DB_MAX_OUTPUT_PORT_TYPE
+eg <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS232_decoder|registre:registre1
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+D[4] => Q[4]~reg0.DATAIN
+D[5] => Q[5]~reg0.DATAIN
+D[6] => Q[6]~reg0.DATAIN
+D[7] => Q[7]~reg0.DATAIN
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+E => Q[7]~reg0.ENA
+E => Q[6]~reg0.ENA
+E => Q[5]~reg0.ENA
+E => Q[4]~reg0.ENA
+E => Q[3]~reg0.ENA
+E => Q[2]~reg0.ENA
+E => Q[1]~reg0.ENA
+E => Q[0]~reg0.ENA
+R => Q[0]~reg0.ACLR
+R => Q[1]~reg0.ACLR
+R => Q[2]~reg0.ACLR
+R => Q[3]~reg0.ACLR
+R => Q[4]~reg0.ACLR
+R => Q[5]~reg0.ACLR
+R => Q[6]~reg0.ACLR
+R => Q[7]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS232_decoder|reg_dec:registre_deca
+D[0] => reg.DATAB
+D[1] => reg.DATAB
+D[2] => reg.DATAB
+D[3] => reg.DATAB
+D[4] => reg.DATAB
+D[5] => reg.DATAB
+D[6] => reg.DATAB
+D[7] => reg.DATAB
+D[7] => reg.DATAB
+clk => reg[0].CLK
+clk => reg[1].CLK
+clk => reg[2].CLK
+clk => reg[3].CLK
+clk => reg[4].CLK
+clk => reg[5].CLK
+clk => reg[6].CLK
+clk => reg[7].CLK
+E => reg.OUTPUTSELECT
+E => reg.OUTPUTSELECT
+E => reg.OUTPUTSELECT
+E => reg.OUTPUTSELECT
+E => reg.OUTPUTSELECT
+E => reg.OUTPUTSELECT
+E => reg.OUTPUTSELECT
+E => reg.OUTPUTSELECT
+R => reg.OUTPUTSELECT
+R => reg.OUTPUTSELECT
+R => reg.OUTPUTSELECT
+R => reg.OUTPUTSELECT
+R => reg.OUTPUTSELECT
+R => reg.OUTPUTSELECT
+R => reg.OUTPUTSELECT
+R => reg.OUTPUTSELECT
+L => reg.OUTPUTSELECT
+L => reg.OUTPUTSELECT
+L => reg.OUTPUTSELECT
+L => reg.OUTPUTSELECT
+L => reg.OUTPUTSELECT
+L => reg.OUTPUTSELECT
+L => reg.OUTPUTSELECT
+L => reg.OUTPUTSELECT
+Q[0] <= reg[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= reg[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= reg[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= reg[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= reg[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= reg[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= reg[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= reg[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS232_decoder|compteur_generic:counter_1
+RESET => CMP[0].ACLR
+RESET => CMP[1].ACLR
+RESET => CMP[2].ACLR
+Rs => CMP.OUTPUTSELECT
+Rs => CMP.OUTPUTSELECT
+Rs => CMP.OUTPUTSELECT
+CLOCK => CMP[0].CLK
+CLOCK => CMP[1].CLK
+CLOCK => CMP[2].CLK
+LOAD => CMP.OUTPUTSELECT
+LOAD => CMP.OUTPUTSELECT
+LOAD => CMP.OUTPUTSELECT
+UP => Co.OUTPUTSELECT
+UP => CMP.OUTPUTSELECT
+UP => CMP.OUTPUTSELECT
+UP => CMP.OUTPUTSELECT
+E => CMP.OUTPUTSELECT
+E => CMP.OUTPUTSELECT
+E => CMP.OUTPUTSELECT
+DATA[0] => CMP.DATAB
+DATA[1] => CMP.DATAB
+DATA[2] => CMP.DATAB
+Q[0] <= CMP[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= CMP[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= CMP[2].DB_MAX_OUTPUT_PORT_TYPE
+Co <= Co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS232_decoder|UC_RS232:UC_fsm
+start => P3.IN0
+start => etat_f.OUTPUTSELECT
+start => etat_f.OUTPUTSELECT
+CE0 => P3.IN1
+CE7 => etat_f.MAJ.DATAB
+CE7 => Selector1.IN2
+reset => etat.MAJ.OUTPUTSELECT
+reset => etat.deca.OUTPUTSELECT
+reset => etat.att.OUTPUTSELECT
+reset => etat~3.DATAIN
+clk => etat~1.DATAIN
+Erd <= Erd.DB_MAX_OUTPUT_PORT_TYPE
+Rrd <= Rrd.DB_MAX_OUTPUT_PORT_TYPE
+Er <= Er.DB_MAX_OUTPUT_PORT_TYPE
+E <= E.DB_MAX_OUTPUT_PORT_TYPE
+R <= R.DB_MAX_OUTPUT_PORT_TYPE
+
+

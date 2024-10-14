@@ -1,0 +1,6 @@
+
+State Machine - |RS232_decoder|UC_RS232:UC_fsm|etat
+Name etat.MAJ etat.deca etat.att 
+etat.att 0 0 0 
+etat.deca 0 1 1 
+etat.MAJ 1 0 1 

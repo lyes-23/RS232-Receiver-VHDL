@@ -1,0 +1,95 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0" version="24.7.17">
+  <diagram name="FSM Diagram" id="bUVcXhJFpJlZQA8am0oo">
+    <mxGraphModel dx="513" dy="532" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CTmx_PDCPfpIGzzKoVod-10" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.99;exitY=0.422;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.908;entryY=0.16;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="571" y="340" as="sourcePoint" />
+            <mxPoint x="565" y="321" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="612" y="340" />
+              <mxPoint x="622" y="330" />
+              <mxPoint x="622" y="320" />
+              <mxPoint x="602" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CTmx_PDCPfpIGzzKoVod-1" value="MAJ" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="300" width="80" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="CTmx_PDCPfpIGzzKoVod-2" value="DECA" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="300" width="80" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="CTmx_PDCPfpIGzzKoVod-3" value="ATTENTE" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="160" width="80" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="CTmx_PDCPfpIGzzKoVod-4" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;endWidth=9.183431952662723;endSize=4.501538461538462;width=6.153846153846154;" edge="1" parent="1" target="CTmx_PDCPfpIGzzKoVod-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="140" as="sourcePoint" />
+            <mxPoint x="360" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CTmx_PDCPfpIGzzKoVod-5" value="Reset" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="290" y="120" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CTmx_PDCPfpIGzzKoVod-7" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.99;exitY=0.422;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.908;entryY=0.16;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="CTmx_PDCPfpIGzzKoVod-3" target="CTmx_PDCPfpIGzzKoVod-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="200" as="sourcePoint" />
+            <mxPoint x="560" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="490" y="190" />
+              <mxPoint x="500" y="180" />
+              <mxPoint x="500" y="170" />
+              <mxPoint x="480" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CTmx_PDCPfpIGzzKoVod-8" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.577;entryY=0.005;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="438.3361212930183" y="219.70328522981083" as="sourcePoint" />
+            <mxPoint x="536.16" y="300.34999999999997" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="510" y="250" />
+              <mxPoint x="540" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CTmx_PDCPfpIGzzKoVod-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.031;exitY=0.561;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.571;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="CTmx_PDCPfpIGzzKoVod-2" target="CTmx_PDCPfpIGzzKoVod-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="370" as="sourcePoint" />
+            <mxPoint x="460" y="320" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="450" y="350" />
+              <mxPoint x="410" y="350" />
+              <mxPoint x="370" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CTmx_PDCPfpIGzzKoVod-11" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0.033;entryY=0.7;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="CTmx_PDCPfpIGzzKoVod-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="300" as="sourcePoint" />
+            <mxPoint x="350" y="250" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="290" y="290" />
+              <mxPoint x="300" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CTmx_PDCPfpIGzzKoVod-12" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;!CE7&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="587" y="288" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CTmx_PDCPfpIGzzKoVod-13" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;CE7&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="385" y="320" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CTmx_PDCPfpIGzzKoVod-14" value="&lt;div&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;!start&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="495" y="148" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CTmx_PDCPfpIGzzKoVod-15" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;start + CE0&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="480" y="218" width="80" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
